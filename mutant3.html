@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutant 3 - Solid Rocket Motor</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'D-DIN';
+            src: url('fonts/D-DIN-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #0a0a0a;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'D-DIN', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #121212;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            font-family: 'D-DIN', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #aaaaaa;
+        }
+
+        main {
+            padding: 3rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-family: 'D-DIN', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        th {
+            background-color: #21262d;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        img, video {
+            max-width: 100%;
+            margin: 1rem 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 1rem 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: #0a0a0a;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mutant 3</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">About</a>
+        <a href="mutant3.html">Mutant 3</a>
+    </nav>
+
+    <main>
+        <!-- 1. Introduction -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Mutant 3 is a reusable rocket motor designed for use in small experimental rockets. 
+                It operates on a solid propellant composed of potassium nitrate and sorbitol. 
+                The motor features an integrated igniter that enables remote ignition from the rocket’s onboard computer, allowing for precise ignition timing and staged propulsion. 
+                This capability makes it a suitable for use as an upper-stage motor in multi-stage rockets. 
+            </p>
+        </section>
+
+        <!-- 2. Specifications -->
+        <section id="specifications">
+            <h2>Specifications</h2>
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                    <th>Unit</th>
+                </tr>
+                <tr>
+                    <td>Propellant</td>
+                    <td>KNSB (65/35)</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Max Thrust</td>
+                    <td>167</td>
+                    <td>N</td>
+                </tr>
+                <tr>
+                    <td>Average Thrust</td>
+                    <td>128</td>
+                    <td>N</td>
+                </tr>
+                <tr>
+                    <td>Burn Time</td>
+                    <td>1.5</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>Specific Impulse</td>
+                    <td>136.8</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>Total Impulse</td>
+                    <td>193</td>
+                    <td>Ns</td>
+                </tr>
+                <tr>
+                    <td>Chamber Pressure</td>
+                    <td>32.5</td>
+                    <td>barA</td>
+                </tr>
+                <tr>
+                    <td>Length</td>
+                    <td>225</td>
+                    <td>mm</td>
+                </tr>
+                <tr>
+                    <td>Diameter</td>
+                    <td>35</td>
+                    <td>mm</td>
+                </tr>
+                <tr>
+                    <td>Propellant Mass</td>
+                    <td>145</td>
+                    <td>g</td>
+                </tr>
+                <tr>
+                    <td>Total Mass</td>
+                    <td>355</td>
+                    <td>g</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 3. Design -->
+        <section id="design">
+            <h2>Design</h2>
+            <p>The motor features a fully metallic design, enclosed on both ends using retaining rings. 
+                It consists of a stainless steel nozzle, and the casing and bulkhead are made of aluminum. 
+                The aluminum components have been anodized to enhance hardness and improve assembly compatibility. 
+                The propellant is divided into three Bates grains, designed to burn both radially and axially, ensuring a flat thrust profile. 
+                The igniter is inserted into the bulkhead after loading the ignition charge, which is suspended on a retainer just above the first propellant block. 
+                This design allows the motor to be armed shortly before integration into the rocket.
+            </p>
+            <img src="images/cross_section.png" alt="Cross-section of the Mutant 3 rocket engine">
+        </section>
+
+
+        <!-- 4. Photo Gallery -->
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <img src="images/motor_1.jpg" alt="Rocket Motor 1">
+                <img src="images/motor_2.jpg" alt="Rocket Motor 2">
+                <img src="images/motor_3.jpg" alt="Rocket Motor 3">
+                <img src="images/motor_4.jpg" alt="Rocket Motor 4">
+                <img src="images/motor_5.jpg" alt="Rocket Motor 5">
+                <img src="images/motor_6.jpg" alt="Rocket Motor 6">
+                <div class="gallery">
+</div>
+            </div>
+        </section>
+
+        <!-- 5. Tests -->
+        <section id="tests">
+            <h2>Tests</h2>
+
+            <p>The motor was tested on a test stand based on a load cell, an HX711 module, and an Arduino board. 
+                The test stand enabled data acquisition at 80 Hz, with a measurement range of up to 200 N. 
+            </p>
+            <p>The figure below illustrates the thrust curve recorded during the test.</p>
+
+            <img src="images/thrust_curve_dark.svg" alt="Thrust curve of the Mutant 3 engine">
+
+            <p>The footage captures the Mutant 3 motor during a static test.</p>
+            <video controls>
+                <source src="videos/test.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Peenemunde</p>
+    </footer>
+</body>
+</html>
