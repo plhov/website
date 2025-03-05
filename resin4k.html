@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutant 3 - Solid Rocket Motor</title>
+    <title>RESIN-4K - Experimental Rocket</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
@@ -104,12 +104,42 @@
             margin: 1rem 0;
         }
 
-        .gallery {
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
             padding: 1rem 0;
         }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-grid img:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .gallery-grid img:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .gallery-grid img:nth-child(3) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+
+        .gallery-grid img:nth-child(4) {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
 
         .gallery img {
             width: 100%;
@@ -142,7 +172,7 @@
 </head>
 <body>
     <header>
-        <h1>Mutant 3</h1>
+        <h1>RESIN-4K</h1>
     </header>
 
     <nav>
@@ -155,14 +185,16 @@
         <!-- 1. Introduction -->
         <section id="introduction">
             <h2>Introduction</h2>
-            <p>Mutant 3 is a reusable rocket motor designed for use in small experimental rockets. 
-                It operates on a solid propellant composed of potassium nitrate and sorbitol. 
-                The motor features an integrated igniter that enables remote ignition from the rocket’s onboard computer, allowing for precise ignition timing and staged propulsion. 
-                This capability makes it a suitable for use as an upper-stage motor in multi-stage rockets. 
-            </p>
+            <p>The RESIN-4K rocket was developed as a platform for testing onboard electronics. 
+                The onboard computer features a Wi-Fi module that enables wireless communication between the launch control station and the rocket. 
+                The ignition signal is transmitted remotely to the onboard computer, allowing for fully autonomous launch sequencing. 
+                The rocket is powered by the MUTANT 3 solid rocket motor. 
+                The recovery system is based on a single parachute deployed using a piston ejection mechanism. 
+                The decision algorithm relies on detecting changes in atmospheric pressure. 
+                For easier post-flight retrieval, the rocket features an integrated GPS-GSM tracking system.</p>
         </section>
 
-        <!-- 2. Specifications -->
+       <!-- 2. Specifications -->
         <section id="specifications">
             <h2>Specifications</h2>
             <table>
@@ -172,109 +204,79 @@
                     <th>Unit</th>
                 </tr>
                 <tr>
-                    <td>Propellant</td>
-                    <td>KNSB (65/35)</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>Max Thrust</td>
-                    <td>167</td>
-                    <td>N</td>
-                </tr>
-                <tr>
-                    <td>Average Thrust</td>
-                    <td>128</td>
-                    <td>N</td>
-                </tr>
-                <tr>
-                    <td>Burn Time</td>
-                    <td>1.5</td>
-                    <td>s</td>
-                </tr>
-                <tr>
-                    <td>Specific Impulse</td>
-                    <td>136.8</td>
-                    <td>s</td>
-                </tr>
-                <tr>
-                    <td>Total Impulse</td>
-                    <td>193</td>
-                    <td>Ns</td>
-                </tr>
-                <tr>
-                    <td>Chamber Pressure</td>
-                    <td>32.5</td>
-                    <td>barA</td>
-                </tr>
-                <tr>
-                    <td>Length</td>
-                    <td>225</td>
+                    <td>Height</td>
+                    <td>962</td>
                     <td>mm</td>
                 </tr>
                 <tr>
                     <td>Diameter</td>
-                    <td>35</td>
+                    <td>62</td>
                     <td>mm</td>
                 </tr>
                 <tr>
-                    <td>Propellant Mass</td>
-                    <td>145</td>
-                    <td>g</td>
+                    <td>Fin Span</td>
+                    <td>183</td>
+                    <td>mm</td>
                 </tr>
                 <tr>
-                    <td>Total Mass</td>
-                    <td>355</td>
+                    <td>GLOM</td>
+                    <td>1130</td>
                     <td>g</td>
                 </tr>
             </table>
         </section>
 
-        <!-- 3. Design -->
-        <section id="design">
-            <h2>Design</h2>
-            <p>The motor features a fully metallic design, enclosed on both ends using retaining rings. 
-                It consists of a stainless steel nozzle, and the casing and bulkhead are made of aluminum. 
-                The aluminum components have been anodized to enhance hardness and improve assembly compatibility. 
-                The propellant is divided into three Bates grains, designed to burn both radially and axially, ensuring a flat thrust profile. 
-                The igniter is inserted into the bulkhead after loading the ignition charge, which is suspended on a retainer just above the first propellant block. 
-                This design allows the motor to be armed shortly before integration into the rocket.
-            </p>
-            <img src="images/cross_section.png" alt="Cross-section of the Mutant 3 rocket engine">
-        </section>
-
-
-        <!-- 4. Photo Gallery -->
+        <!-- 3. Photo Gallery -->
         <section id="gallery">
             <h2>Photo Gallery</h2>
-            <div class="gallery">
-                <img src="images/motor_1.jpg" alt="Rocket Motor 1">
-                <img src="images/motor_2.jpg" alt="Rocket Motor 2">
-                <img src="images/motor_3.jpg" alt="Rocket Motor 3">
-                <img src="images/motor_4.jpg" alt="Rocket Motor 4">
-                <img src="images/motor_5.jpg" alt="Rocket Motor 5">
-                <img src="images/motor_6.jpg" alt="Rocket Motor 6">
-                <div class="gallery">
-</div>
+            <div class="gallery-grid">
+                <img src="images/resin4k_1.jpg">
+                <img src="images/resin4k_2.jpg">
+                <img src="images/resin4k_3.jpg">
+                <img src="images/resin4k_4.jpg">
             </div>
         </section>
 
-        <!-- 5. Tests -->
-        <section id="tests">
-            <h2>Tests</h2>
+        <!-- 4. Flight Test -->
+        <section id="flight-test">
+            <h2>Flight Test</h2>
+            <p>RESIN-4K was launched in a controlled test environment to evaluate its performance. 
+            The rocket successfully achieved its expected flight parameters, and the recovery system was deployed as planned.</p>
 
-            <p>The motor was tested on a test stand based on a load cell, an HX711 module, and an Arduino board. 
-                The test stand enabled data acquisition at 80 Hz, with a measurement range of up to 200 N. 
-            </p>
-            <p>The figure below illustrates the thrust curve recorded during the test.</p>
-
-            <img src="images/thrust_curve_dark.svg" alt="Thrust curve of the Mutant 3 engine">
-
-            <p>The footage captures the Mutant 3 motor during a static test.</p>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/nue3KvKZ7wM" 
-                title="Mutant 3 Static Test" frameborder="0" allowfullscreen>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/S-o5EMAM9FQ" 
+                title="RESIN-4K Rocket Launch" frameborder="0" allowfullscreen>
             </iframe>
+
+            <p>The figure below presents the altitude data recorded during the flight. 
+                The stable descent phase can be observed at approximately 5 m/s, aligning with the expected parachute performance.
+            </p>
+            <img src="images/altitude_data.svg" alt="Altitude vs. Time Graph">
+
+            <h3>Flight Summary</h3>
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                    <th>Unit</th>
+                </tr>
+                <tr>
+                    <td>Time to Apogee</td>
+                    <td>10.8</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>Total Flight Duration</td>
+                    <td>130</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>Apogee</td>
+                    <td>575.5</td>
+                    <td>m</td>
+                </tr>
+            </table>
         </section>
+
     </main>
 
     <footer>
